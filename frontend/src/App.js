@@ -75,9 +75,10 @@ const App = () => {
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/resetPassword/:token" element={<ResetPassword />} />
 
-                  {/* User section */}
+                  {/* only unprotected route */}
                   <Route path='/terms-conditions' element={<TermsConditions/>}/>
 
+                  {/* User section */}
                   <Route path="/about-us" element={<ProtectedRoute><Aboutus /></ProtectedRoute>} />
                   <Route path="/materials" element={<ProtectedRoute><Materials /></ProtectedRoute>} />
                   <Route path="/material/:id" element={<ProtectedRoute><Materials /></ProtectedRoute>} />
